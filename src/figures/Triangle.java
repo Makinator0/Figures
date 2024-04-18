@@ -1,35 +1,31 @@
 package figures;
 
-import enums.EColours;
+import enums.Colours;
 
 public class Triangle extends Shape {
-    private float _base;
-    private float _height;
-    private float _hypotenuse;
+    private float base;
+    private float height;
+    private float hypotenuse;
 
-    public Triangle(float base, float height, float hypotenuse, EColours color) {
+    public Triangle(float base, float height, float hypotenuse, Colours color) {
         super(color);
-        _base = base;
-        _height = height;
-        _hypotenuse = hypotenuse;
+        this.base = base;
+        this.height = height;
+        this.hypotenuse = hypotenuse;
     }
 
-    public float GetBase() {
-        return _base;
-    }
-
-    public float Height() {
-        return _height;
+    public float height() {
+        return height;
     }
 
     @Override
-    public float Area() {
-        return (float) (0.5 * _base * _height);
+    public float area() {
+        return (float) (0.5 * base * height);
     }
 
     @Override
-    public String Info() {
+    public String info() {
         return String.format("Фігура: трикутник, площа: %.2f кв. од., гіпотенуза: %.2f од., колір: %s",
-                Area(), _hypotenuse, color);
+                area(), hypotenuse, color);
     }
 }

@@ -1,26 +1,24 @@
 package utilities;
-import enums.EColours;
-import enums.EShapes;
+import enums.Colours;
+import enums.Shapes;
 import figures.*;
 
 import java.util.ArrayList;
 
 public class RandomFigureFactory
 {
-    private final int maxArrayElementsCount = 10;
-
-    public ArrayList<Shape> generateRandomShapes() {
+    public ArrayList<Shape> generateRandomShapes(int count) {
         ArrayList<Shape> shapes = new ArrayList<>();
-        for (int i = 0; i < RandomUtil.random.nextInt(maxArrayElementsCount); i++) {
+        for (int i = 0; i < RandomUtil.random.nextInt(count); i++) {
             shapes.add(generateRandomShape());
         }
         return shapes;
     }
 
     private Shape generateRandomShape() {
-        EShapes shapeType = EShapes.values()[RandomUtil.random.nextInt(EShapes.values().length)];
+        Shapes shapeType = Shapes.values()[RandomUtil.random.nextInt(Shapes.values().length)];
         float param = RandomUtil.random.nextFloat() * 10;
-        EColours color = EnumUtilities.getRandomValue(EColours.class);
+        Colours color = EnumUtil.getRandomValue(Colours.class);
 
         switch (shapeType) {
             case Square:
@@ -36,30 +34,30 @@ public class RandomFigureFactory
         }
     }
 
-    private Square createSquare(float sideLength, EColours color) {
+    private Square createSquare(float sideLength, Colours color) {
         Square square = new Square(sideLength, color);
-        ShapeDrawer.DrawSquare(square);
+        ShapeDrawer.drawSquare(square);
         return square;
     }
 
-    private Triangle createTriangle(float base, EColours color) {
+    private Triangle createTriangle(float base, Colours color) {
         float height = RandomUtil.random.nextFloat() * 10;
         float hypotenuse = (float) Math.sqrt(base * base + height * height);
         Triangle triangle = new Triangle(base, height, hypotenuse, color);
-        ShapeDrawer.DrawTriangle(triangle);
+        ShapeDrawer.drawTriangle(triangle);
         return triangle;
     }
 
-    private Circle createCircle(float radius, EColours color) {
+    private Circle createCircle(float radius, Colours color) {
         Circle circle = new Circle(radius, color);
-        ShapeDrawer.DrawCircle(circle);
+        ShapeDrawer.drawCircle(circle);
         return circle;
     }
 
-    private Trapezoid createTrapezoid(float upperBase, EColours color) {
+    private Trapezoid createTrapezoid(float upperBase, Colours color) {
         float lowerBase = RandomUtil.random.nextFloat() * upperBase;
         Trapezoid trapezoid = new Trapezoid(upperBase, lowerBase, color);
-        ShapeDrawer.DrawTrapezoid(trapezoid);
+        ShapeDrawer.drawTrapezoid(trapezoid);
         return trapezoid;
     }
 }

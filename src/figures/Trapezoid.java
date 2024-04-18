@@ -1,34 +1,34 @@
 package figures;
 
-import enums.EColours;
+import enums.Colours;
 
 public class Trapezoid extends Shape {
     private final float upperBase;
     private final float lowerBase;
 
-    public Trapezoid(float upperBase, float lowerBase, EColours color) {
+    public Trapezoid(float upperBase, float lowerBase, Colours color) {
         super(color);
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
     }
 
-    public float UpperBase() {
+    public float upperBase() {
         return upperBase;
     }
 
-    public float LowerBase() {
+    public float lowerBase() {
         return lowerBase;
     }
 
     @Override
-    public float Area() {
+    public float area() {
         return (float) (0.5 * (upperBase + lowerBase)); // Площа трапеції обчислюється за формулою: (a + b) / 2 * h
     }
 
     @Override
-    public String Info() {
+    public String info() {
         return String.format("Фігура: трапеція, площа: %.2f кв. од., верхня основа: %.2f од., колір: %s",
-                Area(), upperBase, color);
+                area(), upperBase, color);
     }
 }
 

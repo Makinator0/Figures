@@ -7,11 +7,9 @@ import figures.Triangle;
 
 public class ShapeDrawer
 {
-    // Метод для візуалізації квадрата
-    public static void DrawSquare(Square square)
-    {
-        System.out.println(square.Info());
-        var sideLength = square.SideLength();
+    public static void drawSquare(Square square) {
+        System.out.println(square.info());
+        var sideLength = square.sideLength();
 
         for (int i = 0; i < sideLength; i++) {
             for (int j = 0; j < sideLength; j++) {
@@ -21,11 +19,9 @@ public class ShapeDrawer
         }
     }
 
-    // Метод для візуалізації трикутника
-    public static void DrawTriangle(Triangle triangle)
-    {
-        System.out.println(triangle.Info());
-        var height = triangle.Height();
+    public static void drawTriangle(Triangle triangle) {
+        System.out.println(triangle.info());
+        var height = triangle.height();
 
         for (int i = 0; i < height; i++) {
             for (int j = 0; j <= i; j++) {
@@ -35,11 +31,9 @@ public class ShapeDrawer
         }
     }
 
-    // Метод для візуалізації кола
-    public static void DrawCircle(Circle circle)
-    {
-        System.out.println(circle.Info());
-        float radius = circle.Radius();
+    public static void drawCircle(Circle circle) {
+        System.out.println(circle.info());
+        float radius = circle.radius();
         int diameter = (int) (2 * radius);
 
         for (int i = 0; i <= diameter; i++) {
@@ -56,12 +50,10 @@ public class ShapeDrawer
         }
     }
 
-    // Метод для візуалізації трапеції
-    public static void DrawTrapezoid(Trapezoid trapezoid)
-    {
-        System.out.println(trapezoid.Info());
-        var upperBase = trapezoid.UpperBase();
-        var lowerBase = trapezoid.LowerBase();
+    public static void drawTrapezoid(Trapezoid trapezoid) {
+        System.out.println(trapezoid.info());
+        var upperBase = trapezoid.upperBase();
+        var lowerBase = trapezoid.lowerBase();
         int height = (int) Math.ceil(upperBase / 2.0);
 
         for (int i = 0; i < height; i++) {

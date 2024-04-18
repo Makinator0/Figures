@@ -1,14 +1,14 @@
 package figures;
 
-import enums.EColours;
+import enums.Colours;
 
 public abstract class Shape {
-    protected EColours color;
+    protected Colours color;
 
-    public Shape(EColours color) {
+    public Shape(Colours color) {
         this.color = color;
     }
 
-    public abstract float Area(); // Метод для обчислення площі фігури
-    public abstract String Info(); // Метод для отримання інформації про фігуру
+    public abstract float area(); // Метод для обчислення площі фігури
+    public abstract String info(); // Метод для отримання інформації про фігуру
 }

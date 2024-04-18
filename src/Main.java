@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         RandomFigureFactory randomFigureGenerator = new RandomFigureFactory();
 
-        randomFigureGenerator.generateRandomShapes();
+        int maxArrayElementsCount = 10;
+        randomFigureGenerator.generateRandomShapes(maxArrayElementsCount);
     }
 }

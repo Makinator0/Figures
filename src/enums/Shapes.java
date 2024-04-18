@@ -1,6 +1,6 @@
 package enums;
 
-public enum EShapes
+public enum Shapes
 {
     Circle,
     Square,
