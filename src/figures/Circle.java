@@ -1,27 +1,27 @@
-package Figures;
+package figures;
 
-import Enums.eColours;
+import enums.EColours;
 
 public class Circle extends Shape {
-    private float _radius;
+    private final float radius;
 
-    public Circle(float radius, eColours color) {
+    public Circle(float radius, EColours color) {
         super(color);
-        _radius = radius;
+        this.radius = radius;
     }
 
     public float GetRadius() {
-        return _radius;
+        return radius;
     }
 
     @Override
     public float Area() {
-        return (float) (Math.PI * _radius * _radius);
+        return (float) (Math.PI * radius * radius);
     }
 
     @Override
-    public String GetInfo() {
+    public String Info() {
         return String.format("Фігура: коло, площа: %.2f кв. од., радіус: %.2f од., колір: %s",
-                Area(), _radius, _color);
+                Area(), radius, color);
     }
 }

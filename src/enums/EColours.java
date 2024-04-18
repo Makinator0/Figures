@@ -1,6 +1,6 @@
-package Enums;
+package enums;
 
-public enum eColours
+public enum EColours
 {
     Червоний,
     Синій,

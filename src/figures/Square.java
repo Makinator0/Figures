@@ -1,28 +1,28 @@
-package Figures;
+package figures;
 
-import Enums.eColours;
+import enums.EColours;
 
 public class Square extends Shape {
-    private float _sideLength;
+    private final float sideLength;
 
-    public Square(float sideLength, eColours color) {
+    public Square(float sideLength, EColours color) {
         super(color);
-        _sideLength = sideLength;
+        this.sideLength = sideLength;
     }
 
     public float GetSideLength() {
-        return _sideLength;
+        return sideLength;
     }
 
     @Override
     public float Area()
     {
-        return _sideLength * _sideLength;
+        return sideLength * sideLength;
     }
 
     @Override
-    public String GetInfo() {
+    public String Info() {
         return String.format("Фігура: квадрат, площа: %.2f кв. од., довжина сторони: %.2f од., колір: %s",
-                Area(), _sideLength, _color);
+                Area(), sideLength, color);
     }
 }

@@ -1,16 +1,16 @@
-package Services;
+package utilities;
 
-import Figures.Circle;
-import Figures.Square;
-import Figures.Trapezoid;
-import Figures.Triangle;
+import figures.Circle;
+import figures.Square;
+import figures.Trapezoid;
+import figures.Triangle;
 
 public class ShapeDrawer
 {
     // Метод для візуалізації квадрата
     public static void DrawSquare(Square square)
     {
-        System.out.println(square.GetInfo());
+        System.out.println(square.Info());
         var sideLength = square.GetSideLength();
 
         for (int i = 0; i < sideLength; i++) {
@@ -24,7 +24,7 @@ public class ShapeDrawer
     // Метод для візуалізації трикутника
     public static void DrawTriangle(Triangle triangle)
     {
-        System.out.println(triangle.GetInfo());
+        System.out.println(triangle.Info());
         var height = triangle.GetHeight();
 
         for (int i = 0; i < height; i++) {
@@ -38,7 +38,7 @@ public class ShapeDrawer
     // Метод для візуалізації кола
     public static void DrawCircle(Circle circle)
     {
-        System.out.println(circle.GetInfo());
+        System.out.println(circle.Info());
         float radius = circle.GetRadius();
         int diameter = (int) (2 * radius);
 
@@ -59,7 +59,7 @@ public class ShapeDrawer
     // Метод для візуалізації трапеції
     public static void DrawTrapezoid(Trapezoid trapezoid)
     {
-        System.out.println(trapezoid.GetInfo());
+        System.out.println(trapezoid.Info());
         var upperBase = trapezoid.GetUpperBase();
         var lowerBase = trapezoid.GetLowerBase();
         int height = (int) Math.ceil(upperBase / 2.0);

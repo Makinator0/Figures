@@ -1,10 +1,9 @@
-import Services.RandomFigureGenerator;
-import Services.ShapeDrawer;
+import utilities.RandomFigureFactory;
 
 public class Main {
     public static void main(String[] args) {
-        RandomFigureGenerator randomFigureGenerator = new RandomFigureGenerator();
+        RandomFigureFactory randomFigureGenerator = new RandomFigureFactory();
 
-        randomFigureGenerator.GenerateRandomShapeArrayList();
+        randomFigureGenerator.generateRandomShapes();
     }
 }

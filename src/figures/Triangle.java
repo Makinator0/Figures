@@ -1,13 +1,13 @@
-package Figures;
+package figures;
 
-import Enums.eColours;
+import enums.EColours;
 
 public class Triangle extends Shape {
     private float _base;
     private float _height;
     private float _hypotenuse;
 
-    public Triangle(float base, float height, float hypotenuse, eColours color) {
+    public Triangle(float base, float height, float hypotenuse, EColours color) {
         super(color);
         _base = base;
         _height = height;
@@ -28,8 +28,8 @@ public class Triangle extends Shape {
     }
 
     @Override
-    public String GetInfo() {
+    public String Info() {
         return String.format("Фігура: трикутник, площа: %.2f кв. од., гіпотенуза: %.2f од., колір: %s",
-                Area(), _hypotenuse, _color);
+                Area(), _hypotenuse, color);
     }
 }
