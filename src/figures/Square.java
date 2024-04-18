@@ -10,7 +10,7 @@ public class Square extends Shape {
         this.sideLength = sideLength;
     }
 
-    public float GetSideLength() {
+    public float SideLength() {
         return sideLength;
     }
 

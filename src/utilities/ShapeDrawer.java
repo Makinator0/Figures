@@ -11,7 +11,7 @@ public class ShapeDrawer
     public static void DrawSquare(Square square)
     {
         System.out.println(square.Info());
-        var sideLength = square.GetSideLength();
+        var sideLength = square.SideLength();
 
         for (int i = 0; i < sideLength; i++) {
             for (int j = 0; j < sideLength; j++) {
@@ -25,7 +25,7 @@ public class ShapeDrawer
     public static void DrawTriangle(Triangle triangle)
     {
         System.out.println(triangle.Info());
-        var height = triangle.GetHeight();
+        var height = triangle.Height();
 
         for (int i = 0; i < height; i++) {
             for (int j = 0; j <= i; j++) {
@@ -39,7 +39,7 @@ public class ShapeDrawer
     public static void DrawCircle(Circle circle)
     {
         System.out.println(circle.Info());
-        float radius = circle.GetRadius();
+        float radius = circle.Radius();
         int diameter = (int) (2 * radius);
 
         for (int i = 0; i <= diameter; i++) {
@@ -60,8 +60,8 @@ public class ShapeDrawer
     public static void DrawTrapezoid(Trapezoid trapezoid)
     {
         System.out.println(trapezoid.Info());
-        var upperBase = trapezoid.GetUpperBase();
-        var lowerBase = trapezoid.GetLowerBase();
+        var upperBase = trapezoid.UpperBase();
+        var lowerBase = trapezoid.LowerBase();
         int height = (int) Math.ceil(upperBase / 2.0);
 
         for (int i = 0; i < height; i++) {

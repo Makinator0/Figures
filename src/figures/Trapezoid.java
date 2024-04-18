@@ -12,11 +12,11 @@ public class Trapezoid extends Shape {
         this.lowerBase = lowerBase;
     }
 
-    public float GetUpperBase() {
+    public float UpperBase() {
         return upperBase;
     }
 
-    public float GetLowerBase() {
+    public float LowerBase() {
         return lowerBase;
     }
 

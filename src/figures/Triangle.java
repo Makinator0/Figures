@@ -18,7 +18,7 @@ public class Triangle extends Shape {
         return _base;
     }
 
-    public float GetHeight() {
+    public float Height() {
         return _height;
     }
 
